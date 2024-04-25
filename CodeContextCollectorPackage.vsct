@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="guidCodeContextCollectorPackage">
+    <Groups>
+      <Group guid="guidCodeContextCollectorCmdSet" id="CodeContextCollectorMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidCodeContextCollectorCmdSet" id="CopyOpenFilesCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidCodeContextCollectorCmdSet" id="CodeContextCollectorMenuGroup" />
+        <Icon guid="guidCodeContextCollectorImages" id="bmpCopyFilesDarkTheme" />
+        <Strings>
+          <ButtonText>Copy Open Files Content to Clipboard</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidCodeContextCollectorCmdSet" id="OpenReferencedTypesCommandId" priority="0x0101" type="Button">
+        <Parent guid="guidCodeContextCollectorCmdSet" id="CodeContextCollectorMenuGroup" />
+        <Icon guid="guidCodeContextCollectorImages" id="bmpOpenTypesDarkTheme" />
+        <Strings>
+          <ButtonText>Open Referenced Types</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="guidCodeContextCollectorImages" href="Resources\CombinedIcons_16x16x4_DarkLight.png" usedList="bmpOpenTypesDarkTheme, bmpCopyFilesDarkTheme, bmpOpenTypesLightTheme, bmpCopyFilesLightTheme" />
+    </Bitmaps>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="guidCodeContextCollectorPackage" value="{1b1262e3-81a1-4f25-9221-200e0ab7a1c7}" />
+    <GuidSymbol name="guidCodeContextCollectorCmdSet" value="{722f08d1-568d-4c64-9372-4334257e826d}">
+      <IDSymbol name="CodeContextCollectorMenuGroup" value="0x1020" />
+      <IDSymbol name="CopyOpenFilesCommandId" value="0x0100" />
+      <IDSymbol name="OpenReferencedTypesCommandId" value="0x0101" />
+    </GuidSymbol>
+    <GuidSymbol name="guidCodeContextCollectorImages" value="{e6dfe6ad-28d7-476e-a256-bd06df0ea268}">
+      <IDSymbol name="bmpOpenTypesDarkTheme" value="1" />
+      <IDSymbol name="bmpCopyFilesDarkTheme" value="2" />
+      <IDSymbol name="bmpOpenTypesLightTheme" value="3" />
+      <IDSymbol name="bmpCopyFilesLightTheme" value="4" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
